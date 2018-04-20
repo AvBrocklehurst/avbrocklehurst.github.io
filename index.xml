@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adam Brocklehurst</title>
+    <link>https://avbrocklehurst.github.io/</link>
+    <description>Recent content on Adam Brocklehurst</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 20 Apr 2018 15:23:31 +0100</lastBuildDate>
+    
+	<atom:link href="https://avbrocklehurst.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Me</title>
+      <link>https://avbrocklehurst.github.io/posts/me/</link>
+      <pubDate>Fri, 20 Apr 2018 15:23:31 +0100</pubDate>
+      
+      <guid>https://avbrocklehurst.github.io/posts/me/</guid>
+      <description>Hi, I’m Adam.
+I’m a software engineer who really loves blogs. I, however, really suck at writing. In university I once managed to get 19% on an essay, although I did just about get the grasp of academic writing, in the end, clutching a first on my dissertation module.
+I’d love to be able to write well-articulated blog posts that can excite readers about topics I am passionate about, and the only way I am going to get better at that is by doing it.</description>
+    </item>
+    
+  </channel>
+</rss>
