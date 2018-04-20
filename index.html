@@ -88,8 +88,19 @@ ga('send', 'pageview');
         <li><a href="/posts/me/">About</a></li>
         <li><a href="/">Blog</a></li>
         
+        <li><a onclick="penguin()" id="penguin-toggle" href="#">Penguin</a></li>
     </ul>
-</section></div>
+    <div id="penguin" style="display:none;">
+        <img src="/img/penguin.png">
+    </div>
+</section>
+
+<script>
+function penguin() {
+    var div = document.getElementById("penguin");
+    div.style.display = div.style.display == "none" ? "block" : "none";
+}
+</script></div>
 </div>
 
     <div class='main'>

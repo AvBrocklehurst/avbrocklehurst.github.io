@@ -130,3 +130,14 @@ code {
     padding: 10px;
     display: inline-block;
 }
+
+#penguin {
+    display: none; 
+    margin-left: 110px; 
+    text-align: left; 
+    margin-top: 20px;
+}
+
+#penguin img {
+    width: 60px;
+}
