@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Thanks to a combination of a little snow in the UK, a cancelled flight, and a lot of rain in Lisbon, I recently ended up spending a day stuck in a hotel room. So I did what any bored software engineer does, mess about and write some code.
+A couple of days earlier at work, we updated our Github slack integration. Github has released an updated version for non-enterprise users that was much prettier and gave a lot of nice functionality from slack commands rather than having to go to an admin page.'>
+
+<meta property='og:title' content='Making ASCII GIFs • Adam Brocklehurst'>
+<meta property='og:description' content='Thanks to a combination of a little snow in the UK, a cancelled flight, and a lot of rain in Lisbon, I recently ended up spending a day stuck in a hotel room. So I did what any bored software engineer does, mess about and write some code.
+A couple of days earlier at work, we updated our Github slack integration. Github has released an updated version for non-enterprise users that was much prettier and gave a lot of nice functionality from slack commands rather than having to go to an admin page.'>
+<meta property='og:url' content='https://avbrocklehurst.github.io/posts/making-ascii-gifs/'>
+<meta property='og:site_name' content='Adam Brocklehurst'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:published_time' content='2018-04-20T15:23:31&#43;01:00'/><meta property='article:modified_time' content='2018-04-20T15:23:31&#43;01:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.37" />
+
+  <title>Making ASCII GIFs • Adam Brocklehurst</title>
+  <link rel='canonical' href='https://avbrocklehurst.github.io/posts/making-ascii-gifs/'>
+  
+  
+  <link rel='icon' href='/img/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.8d5211f9.css'><link rel='stylesheet' href='/css/custom.css'>
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-73085749-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+
+<body class='page type-posts has-sidebar sidebar-sticky'>
+
+  <div class='site single'>
+
+    <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+<div id='sidebar' class='sidebar'>
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/img/me-circle.png'>
+      </a>
+    </div>
+    
+   
+    <section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/avbrocklehurst' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/adambrockle' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/adam-brocklehurst-b2a6878b' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section>
+
+  </header>
+
+</section>
+<section class="side_menu">
+    <ul>
+        <li><a href="/posts/me/">About</a></li>
+        <li><a href="/">Blog</a></li>
+        
+    </ul>
+</section></div>
+</div>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='hamburger hamburger--arrow sidebar-toggler' type='button' aria-controls='sidebar' aria-expanded='false'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</nav>
+
+          
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Adam Brocklehurst</p><p class='desc site-desc'>Gopher, Software Engineer, Penguin Lover.</p>
+          </div>
+        </div>
+      </header>
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Making ASCII GIFs</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-04-20T15:23:31&#43;01:00'>2018, Apr 20</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+4 minute read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Thanks to a combination of a little snow in the UK, a cancelled flight, and a lot of rain in Lisbon, I recently ended up spending a day stuck in a hotel room. So I did what any bored software engineer does, mess about and write some code.</p>
+
+<p>A couple of days earlier at work, we updated our Github slack integration. Github has released an updated version for non-enterprise users that was much prettier and gave a lot of nice functionality from slack commands rather than having to go to an admin page. However, as we shortly found out due to our company policy of requiring a GIF to be attached to each pull request into master, it no longer previewed gifs in slack. Not only was this a heartbreaking realization but it also showed me, because of how shocked we were at the lack of support, how commonplace GIFs have become and how we need them integrated into everything.</p>
+
+<p>At this point, I wondered how often GIFs were used in command line programs and decided that it is definitely something that should be done more. And that is how I ended up deciding to write a gif to ASCII for the command line library on a rainy Saturday sat in a hotel room in Lisbon.</p>
+
+<p>Pretty much all my developer life I have shied away from almost anything graphical that wasn&rsquo;t HTML. I hated my computer graphics module at university and I simply cannot get my head around building UI&rsquo;s in android. So going in hand with that, I pretty much know nothing about how images are encoded or represented. I thought this would be a good idea to learn a bit about GIFs (and how to turn them into ASCII.)</p>
+
+<h3 id="gifs">GIFs</h3>
+
+<p>Naively, when I first set out to build this tool I thought &ldquo;GIFs are just a bunch of images played in sequence, obviously.&rdquo; I was sure that this was going to be quick and simple I decided I&rsquo;d just split the GIF into its individual frames and convert those into ASCII.</p>
+
+<p>So I tried something like this:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">gif</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">gif</span>.<span style="color:#a6e22e">DecodeAll</span>(<span style="color:#a6e22e">r</span>)
+<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+    <span style="color:#66d9ef">return</span>
+}
+<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">img</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">gif</span>.<span style="color:#a6e22e">Image</span> {
+    <span style="color:#75715e">//do something with this image here
+</span><span style="color:#75715e"></span>}</code></pre></div></p>
+
+<p>I was interested to see the output of this. The first image was fine.</p>
+
+<p><img src="/img/ascii-gif/0.jpeg" alt="First gif image is fine" /></p>
+
+<p>The second, not so…</p>
+
+<p><img src="/img/ascii-gif/1.jpeg" alt="Second gif image is not so fine" /></p>
+
+<p>I did a quick Google thinking I had done something very weird but I actually learnt something cool. The only frame of the GIF that has to be a whole image is the first one. After that, all other images just draw on top of the original frame, changing the pixels they need to. This means they don&rsquo;t have to hold the information for the whole frame, saving storage space.</p>
+
+<p>To handle this I had to store the previous state in memory and draw over the parts that needed changing on each frame.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">//some lines ommited 
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">frame</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">NewGray</span>(<span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">Rect</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">gif</span>.<span style="color:#a6e22e">Config</span>.<span style="color:#a6e22e">Width</span>, <span style="color:#a6e22e">gif</span>.<span style="color:#a6e22e">Config</span>.<span style="color:#a6e22e">Height</span>))
+<span style="color:#a6e22e">draw</span>.<span style="color:#a6e22e">Draw</span>(<span style="color:#a6e22e">frame</span>, <span style="color:#a6e22e">frame</span>.<span style="color:#a6e22e">Bounds</span>(), <span style="color:#a6e22e">gif</span>.<span style="color:#a6e22e">Image</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">ZP</span>, <span style="color:#a6e22e">draw</span>.<span style="color:#a6e22e">Src</span>)
+<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">img</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">gif</span>.<span style="color:#a6e22e">Image</span> {
+    <span style="color:#a6e22e">draw</span>.<span style="color:#a6e22e">Draw</span>(<span style="color:#a6e22e">frame</span>, <span style="color:#a6e22e">frame</span>.<span style="color:#a6e22e">Bounds</span>(), <span style="color:#a6e22e">img</span>, <span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">ZP</span>, <span style="color:#a6e22e">draw</span>.<span style="color:#a6e22e">Over</span>)
+    <span style="color:#a6e22e">asciifyFrame</span>(<span style="color:#a6e22e">frame</span>)
+}</code></pre></div>
+
+<p>Here I create a blank grey image then do an initial draw (with draw.Src as it is the initial source image) over it. Then as each frame is iterated over, the new content is drawn on top of the previous image. And best of all, it works!</p>
+
+<p>It requires an image with extremely high contrast in order to look good currently (black and white works best), but it can produce some quite cool results. The ASCII GIF here is a recording from my terminal that was converted to a gif, so it&rsquo;s a bit slow and low quality, but it shows you that it works. If you want to see a higher quality version you can <a href="https://github.com/AvBrocklehurst/go-ascii-gif" target="_blank">download the code</a> and play around yourself.</p>
+
+<div class="image-pair">
+    <div class="first">
+        <img src=/img/ascii-gif/alice-ascii.gif />
+    </div>
+    <div class="second">
+        <img src=/img/ascii-gif/alice.gif />
+    </div>
+</div>
+
+<p>The code isn&rsquo;t particularly clean, and there is a bit more work to be done on it, but I enjoyed making it and learnt something, that&rsquo;s all that matters I think.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/posts/me/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Me</a>
+    </div></div>
+</nav>
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'>
+          <div class='copyright'>
+  <p></p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><div class='sidebar-overlay'></div><script>window.__public_path__='\/assets\/js\/'</script>
+
+<script src='/assets/js/main.80cd10bb.js'></script><script src='/js/custom.js'></script>
+</body>
+
+</html>
+
