@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Adam Brocklehurst</title>
-    <link>https://avbrocklehurst.github.io/posts/</link>
+    <link>https://avbrocklehurst.co.uk/posts/</link>
     <description>Recent content in Posts on Adam Brocklehurst</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 23 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://avbrocklehurst.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://avbrocklehurst.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Problems</title>
-      <link>https://avbrocklehurst.github.io/posts/problems/</link>
+      <link>https://avbrocklehurst.co.uk/posts/problems/</link>
       <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://avbrocklehurst.github.io/posts/problems/</guid>
+      <guid>https://avbrocklehurst.co.uk/posts/problems/</guid>
       <description>When debating with myself over what topics I wanted to write about, my first thoughts were all very technical. I have had the privilege to explore a fair amount of exciting technologies, products, and patterns recently, thanks to my job, and I’d love to share what I had learnt and what had excited me with the world. Thus, my first substantive post on this blog was about something technical that had excited me.</description>
     </item>
     
     <item>
       <title>Making ASCII GIFs</title>
-      <link>https://avbrocklehurst.github.io/posts/making-ascii-gifs/</link>
+      <link>https://avbrocklehurst.co.uk/posts/making-ascii-gifs/</link>
       <pubDate>Fri, 20 Apr 2018 15:23:31 +0100</pubDate>
       
-      <guid>https://avbrocklehurst.github.io/posts/making-ascii-gifs/</guid>
+      <guid>https://avbrocklehurst.co.uk/posts/making-ascii-gifs/</guid>
       <description>Thanks to a combination of a little snow in the UK, a cancelled flight, and a lot of rain in Lisbon, I recently ended up spending a day stuck in a hotel room. So I did what any bored software engineer does, mess about and write some code.
 A couple of days earlier at work, we updated our Github slack integration. Github has released an updated version for non-enterprise users that was much prettier and gave a lot of nice functionality from slack commands rather than having to go to an admin page.</description>
     </item>
     
     <item>
       <title>Me</title>
-      <link>https://avbrocklehurst.github.io/posts/me/</link>
+      <link>https://avbrocklehurst.co.uk/posts/me/</link>
       <pubDate>Fri, 20 Apr 2018 12:00:00 +0100</pubDate>
       
-      <guid>https://avbrocklehurst.github.io/posts/me/</guid>
+      <guid>https://avbrocklehurst.co.uk/posts/me/</guid>
       <description>Hi, I’m Adam.
 I’m a software engineer who really loves blogs. I, however, really suck at writing. In university I once managed to get 19% on an essay.
 I’d love to be able to write well-articulated blog posts that can excite readers about topics I am passionate about, and the only way I am going to get better at that is by doing it.
