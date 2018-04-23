@@ -141,3 +141,11 @@ code {
 #penguin img {
     width: 60px;
 }
+
+.entry-nav div a {
+    display: inline-block;
+}
+
+.entry-nav div a.next {
+    float: right;
+}
