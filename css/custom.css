@@ -25,18 +25,22 @@
 
 :root {
     --main-green: #32c76b;
+    --main-grey: #545454;
 }
 
 body {
     font-family: "ClearSans";
     hyphens: auto;
+    color: var(--main-grey);
+}
+
+a, h2, h3, h4, h5, h6 {
+    color: var(--main-grey);
 }
 
 .entry-content {
     text-align: justify;
 }
-
-
 
 .header {
     margin-bottom: 40px;
@@ -56,6 +60,10 @@ h2.site-title {
 
 .header-info {
     margin-top: 0;
+}
+
+.entry-content p {
+    color: var(--main-grey);
 }
 
 .entry-content h3 {
